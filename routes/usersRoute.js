@@ -1,12 +1,9 @@
 const express = require('express');
 const router= express.Router();
 
-router.get('/SignUp',(req,res,next)=>{
-    res.json('users route');
-    
-})
-router.get('/Login',(req,res,next)=>{
+const {getLogin,getSignUp}= require('../controlers/usersControl');
 
-})
+router.get('/SignUp',getSignUp)
+router.get('/Login',getLogin)
 
 module.exports= router;
