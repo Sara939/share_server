@@ -1,3 +1,4 @@
+const chanel= require('../models/chanelsModel');
 const getAllChannels= (req,res,next)=>{
     res.json('chanels route')
 
@@ -11,7 +12,16 @@ const getAboutUs= (req,res,next)=>{
 
 };
 
-const postChannel= (req,res,next)=>{
+const postChannel= async(req,res,next)=>{
+ const {title,text,date,category}= req.body
+ try{
+    const chanel= await chanel.create({title,text,date,category})
+ }
+
+ catch(err){
+    console.log(err);
+ }
+ res.send("get it")
 
 };
 
