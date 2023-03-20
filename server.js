@@ -20,7 +20,7 @@ server.get('/',(req,res,next)=>{
 res.json('home')
 });
 
-mongoose.connect('mongodb+srv://sara:saralikaount@channels.elrzcqo.mongodb.net/channelretryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://sara:saralikaount@channels.elrzcqo.mongodb.net/techshareDB')
 .then(()=>{
    server.listen(PORT,()=>{
     console.log('server on');

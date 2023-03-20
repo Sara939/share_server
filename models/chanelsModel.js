@@ -8,6 +8,7 @@ const chanel= new Schema ({
     date: String,
     category: String
 
+
 });
 
 module.exports= mongoose.model('Channel', chanel);
