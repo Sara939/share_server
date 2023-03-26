@@ -1,8 +1,9 @@
-const chanelsModel= require('../models/chanelsModel');
+const chanelModel= require('../models/chanelsModel');
 
-const getAllChannels= (req,res,next)=>{
+const getAllChannels= async (req,res,next)=>{
 
-   chanelsModel ? res.send({massage: "djdjd", chanelsModel}) : res.send({massage: "no chanels"})
+   const chanels = await chanelModel.find({})
+   chanels ? res.send({massage: "sucsess", chanels}) : res.send({massage: "no chanels"})
 }
 
 const getTopChart= (req,res,next)=>{
