@@ -16,9 +16,9 @@ server.use(express.urlencoded({extended:true}));
 server.use(channelsRouter);
 server.use(usersRouter);
 
-server.get('/',(req,res,next)=>{
-res.json('home')
-});
+// server.get('/',(req,res,next)=>{
+// res.json('home')
+// });
 
 mongoose.connect('mongodb+srv://sara:saralikaount@channels.elrzcqo.mongodb.net/techshareDB')
 .then(()=>{
