@@ -1,26 +1,27 @@
 const chanelModel= require('../models/chanelsModel');
 
-const getAllChannels= async (req,res,next)=>{
+const getAllChannels= async (req,res)=>{
 
    const chanels = await chanelModel.find({})
    chanels ? res.send(chanels) : res.send({massage: "no chanels"})
 }
 
 
-const postChannel= async(req,res,next)=>{
- const {title,text,date,category}= req.body
+const postChannel= async(req,res)=>{
+ const {title,text,videoname,category}= req.body
  try{
-    const newchanel= await chanelModel.create({title,text,videoname,date,category})
+    const newchanel= await chanelModel.create({title,text,videoname,category})
  }
 
  catch(err){
     console.log(err);
  }
- res.send({massage: "added chanel to db", newchanel})
+ res.send({massage: "added chanel to db"})
+ console.log("done");
 
 };
 
-const deleteChannel= (req,res,next)=>{
+const deleteChannel= (req,res)=>{
 
 };
 

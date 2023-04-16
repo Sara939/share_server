@@ -5,7 +5,6 @@ const chanel= new Schema ({
     title: String,
     text: String,
     videoname: String,
-    date: String,
     category: String
 });
 
