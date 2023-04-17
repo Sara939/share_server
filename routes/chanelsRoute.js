@@ -5,6 +5,6 @@ const router= express.Router();
 
 router.get('/Channels',getAllChannels);
 router.post('/Addchannel',postChannel);
-router.delete('/Addchannel',deleteChannel);
+router.delete('/Topchart',deleteChannel);
 
 module.exports= router;

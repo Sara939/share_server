@@ -3,7 +3,6 @@ const cors = require('cors');
 const server = express();
 const PORT= 5000;
 const channelsRouter= require('./routes/chanelsRoute');
-const usersRouter= require('./routes/usersRoute');
 const mongoose= require('mongoose');
 
 
@@ -14,7 +13,6 @@ server.use(express.json({extended: true}));
 server.use(express.urlencoded({extended:true}));
 
 server.use(channelsRouter);
-server.use(usersRouter);
 
 // server.get('/',(req,res,next)=>{
 // res.json('home')

@@ -5,7 +5,8 @@ const chanel= new Schema ({
     title: String,
     text: String,
     videoname: String,
-    category: String
+    category: String,
+    date: Date
 });
 
 module.exports= mongoose.model('Channel', chanel);
