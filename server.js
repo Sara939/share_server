@@ -4,6 +4,9 @@ const server = express();
 const PORT= 5000;
 const channelsRouter= require('./routes/chanelsRoute');
 const mongoose= require('mongoose');
+const dotenv= require('dotenv');
+dotenv.config();
+
 
 
 
@@ -14,11 +17,7 @@ server.use(express.urlencoded({extended:true}));
 
 server.use(channelsRouter);
 
-// server.get('/',(req,res,next)=>{
-// res.json('home')
-// });
-
-mongoose.connect('mongodb+srv://sara:saralikaount@channels.elrzcqo.mongodb.net/techshareDB')
+mongoose.connect(process.env.CONECTION_TO_DB)
 .then(()=>{
    server.listen(PORT,()=>{
     console.log('server on');
