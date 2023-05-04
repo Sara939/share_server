@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const server = express();
-const PORT= 5000;
+const PORT= shareserver.up.railway.app;
 const channelsRouter= require('./routes/chanelsRoute');
 const mongoose= require('mongoose');
 const dotenv= require('dotenv');
