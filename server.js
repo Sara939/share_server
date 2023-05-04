@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const server = express();
-const PORT= shareserver.up.railway.app;
+const PORT= 5000;
 const channelsRouter= require('./routes/chanelsRoute');
 const mongoose= require('mongoose');
 const dotenv= require('dotenv');
@@ -17,7 +17,7 @@ server.use(channelsRouter);
 
 mongoose.connect(process.env.CONECTION_TO_DB)
 .then(()=>{
-   server.listen(PORT,()=>{
+   server.listen(process.env.PORT || PORT,()=>{
     console.log('server on');
 }); 
 })
