@@ -9,8 +9,6 @@ dotenv.config();
 
 
 
-
-
 server.use(cors());
 server.use(express.json({extended: true}));
 server.use(express.urlencoded({extended:true}));
@@ -24,5 +22,4 @@ mongoose.connect(process.env.CONECTION_TO_DB)
 }); 
 })
 .catch(err=> console.log(err))
-
 
